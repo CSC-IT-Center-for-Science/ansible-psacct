@@ -1,0 +1,6 @@
+---
+- name: install acct packages on Debian
+  apt: name=acct state=installed
+
+- name: enable and start acct on Debian
+  service: name=acct state=started enabled=yes

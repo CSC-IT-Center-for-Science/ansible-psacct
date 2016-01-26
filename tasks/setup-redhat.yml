@@ -1,3 +1,6 @@
 ---
-- name: install psacct packages
+- name: install psacct packages on RedHat
   yum: name=psacct state=installed
+
+- name: enable and start psacct on RedHat
+  service: name=psacct state=started enabled=yes

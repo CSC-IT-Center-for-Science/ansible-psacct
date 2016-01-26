@@ -3,5 +3,5 @@
 - include: setup-redhat.yml
   when: ansible_os_family == "RedHat"
 
-- name: enable and start psacct
-  service: name=psacct state=started enabled=yes
+- include: setup-debian.yml
+  when: ansible_os_family == "Debian"
